@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão Acadêmica</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            width: 350px;
+            margin: 50px auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            background-color: orange;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: -20px -20px 20px -20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        input[type="text"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .inline {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        textarea {
+            height: 80px;
+        }
+        input[type="submit"],
+        input[type="button"] {
+            width: 100px;
+            padding: 5px;
+            margin-top: 20px;
+            margin-right: 10px;
+            border: none;
+            background-color: #e0e0e0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover,
+        input[type="button"]:hover {
+            background-color: #d0d0d0;
+        }
+        .button-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Sistema de Gestão Acadêmica</h2>
+
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login">
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha">
+
+        <label for="status">Status:</label>
+        <select id="status" name="status">
+            <option>Inativo</option>
+        </select>
+
+        <label>Tipo:</label>
+        <label class="inline"><input type="radio" name="tipo" value="tecnico"> Técnico(a)</label>
+        <label class="inline"><input type="radio" name="tipo" value="professor"> Professor(a)</label>
+        <label class="inline"><input type="radio" name="tipo" value="aluno"> Aluno(a)</label>
+
+        <label for="data_criacao">Data de Criação:</label>
+        <input type="text" id="data_criacao" name="data_criacao" placeholder="dd/mm/aaaa">
+
+        <label>Perfil:</label>
+        <label class="inline"><input type="radio" name="perfil" value="convidado"> Convidado(a)</label>
+        <label class="inline"><input type="radio" name="perfil" value="administrador"> Administrador(a)</label>
+
+        <label for="observacoes">Observações:</label>
+        <textarea id="observacoes" name="observacoes"></textarea>
+
+        <label>Módulo:</label>
+        <label class="inline"><input type="checkbox" name="modulo" value="compras"> Compras</label>
+        <label class="inline"><input type="checkbox" name="modulo" value="biblioteca"> Biblioteca</label>
+        <label class="inline"><input type="checkbox" name="modulo" value="academico"> Acadêmico</label>
+        <label class="inline"><input type="checkbox" name="modulo" value="documentacao"> Documentação</label>
+        <label class="inline"><input type="checkbox" name="modulo" value="recursos"> Recursos Humanos</label>
+
+        <div class="button-container">
+            <input type="submit" value="Cadastrar">
+            <input type="button" value="Excluir">
+        </div>
+    </form>
+</body>
+</html>
